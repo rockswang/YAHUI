@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<skin id="android">
+
+	<!--                BUTTON SKIN ITEMS                         -->
+	<item id="button.up">
+		<image>
+			<part id="top.left" path="button/button_up_nw.png" />
+			<part id="top" path="button/button_up_n.png" />
+			<part id="top.right" path="button/button_up_ne.png" />
+			<part id="right" path="button/button_up_e.png" />
+			<part id="bottom.right" path="button/button_up_se.png" />
+			<part id="bottom" path="button/button_up_s.png" />
+			<part id="bottom.left" path="button/button_up_sw.png" />
+			<part id="left" path="button/button_up_w.png" />
+			<part id="middle" path="button/button_up_content.png" />
+		</image>
+	</item>
+
+	<!--
+	<item id="button.over">
+		<image>
+			<part id="top.left" path="button/button_over_nw.png" />
+			<part id="top" path="button/button_over_n.png" />
+			<part id="top.right" path="button/button_over_ne.png" />
+			<part id="right" path="button/button_over_e.png" />
+			<part id="bottom.right" path="button/button_over_se.png" />
+			<part id="bottom" path="button/button_over_s.png" />
+			<part id="bottom.left" path="button/button_over_sw.png" />
+			<part id="left" path="button/button_over_w.png" />
+			<part id="middle" path="button/button_over_content.png" />
+		</image>
+	</item>
+	-->
+
+	<item id="button.down">
+		<image>
+			<part id="top.left" path="button/button_down_nw.png" />
+			<part id="top" path="button/button_down_n.png" />
+			<part id="top.right" path="button/button_down_ne.png" />
+			<part id="right" path="button/button_down_e.png" />
+			<part id="bottom.right" path="button/button_down_se.png" />
+			<part id="bottom" path="button/button_down_s.png" />
+			<part id="bottom.left" path="button/button_down_sw.png" />
+			<part id="left" path="button/button_down_w.png" />
+			<part id="middle" path="button/button_down_content.png" />
+		</image>
+	</item>
+	
+	<!--                TAB SKIN ITEMS                         -->
+	<item id="tab.unselected.up">
+		<image>
+			<part id="middle" path="tabs/tab_unselected_bg.png" />
+		</image>
+	</item>
+
+	<!--
+	<item id="tab.unselected.over">
+		<image>
+			<part id="middle" path="tabs/tab_unselected_bg.png" />
+		</image>
+	</item>
+	-->
+
+	<item id="tab.selected.up">
+		<image>
+			<part id="middle" path="tabs/tab_selected_bg.png" />
+		</image>
+	</item>
+
+	<!--                TABBAR SKIN ITEMS                         -->
+	<item id="tabbar.background">
+		<image>
+			<part id="top.left" path="tabbar/tabbar_bg_nw.png" />
+			<part id="top" path="tabbar/tabbar_bg_n.png" />
+			<part id="top.right" path="tabbar/tabbar_bg_ne.png" />
+			<part id="right" path="tabbar/tabbar_bg_e.png" />
+			<part id="bottom.right" path="tabbar/tabbar_bg_se.png" />
+			<part id="bottom" path="tabbar/tabbar_bg_s.png" />
+			<part id="bottom.left" path="tabbar/tabbar_bg_sw.png" />
+			<part id="left" path="tabbar/tabbar_bg_w.png" />
+			<part id="middle" path="tabbar/tabbar_bg_content.png" />
+		</image>
+	</item>
+
+	<!--                VSCROLL SKIN ITEMS                         -->
+	<!--
+	<item id="vscroll.background">
+		<image>
+			<part id="middle" path="vscroll/vscroll_bg.png" />
+		</image>
+	</item>
+	-->
+
+	<!--                VSCROLL SKIN ITEMS                         -->
+	<item id="vscroll.thumb.up">
+		<image>
+			<part id="top.left" path="vscroll/vscroll_thumb_up_nw.png" />
+			<part id="top" path="vscroll/vscroll_thumb_up_n.png" />
+			<part id="top.right" path="vscroll/vscroll_thumb_up_ne.png" />
+			<part id="right" path="vscroll/vscroll_thumb_up_e.png" />
+			<part id="bottom.right" path="vscroll/vscroll_thumb_up_se.png" />
+			<part id="bottom" path="vscroll/vscroll_thumb_up_s.png" />
+			<part id="bottom.left" path="vscroll/vscroll_thumb_up_sw.png" />
+			<part id="left" path="vscroll/vscroll_thumb_up_w.png" />
+			<part id="middle" path="vscroll/vscroll_thumb_up_content.png" />
+		</image>
+	</item>
+
+	<!--
+	<item id="vscroll.thumb.gripper.up">
+		<image>
+			<part id="middle" path="vscroll/vscroll_thumb_gripper_up.png" />
+		</image>
+	</item>
+	-->
+
+	<!--
+	<item id="vscroll.thumb.down">
+		<image>
+			<part id="top.left" path="vscroll/vscroll_thumb_up_nw.png" />
+			<part id="top" path="vscroll/vscroll_thumb_up_n.png" />
+			<part id="top.right" path="vscroll/vscroll_thumb_up_ne.png" />
+			<part id="right" path="vscroll/vscroll_thumb_up_e.png" />
+			<part id="bottom.right" path="vscroll/vscroll_thumb_up_se.png" />
+			<part id="bottom" path="vscroll/vscroll_thumb_up_s.png" />
+			<part id="bottom.left" path="vscroll/vscroll_thumb_up_sw.png" />
+			<part id="left" path="vscroll/vscroll_thumb_up_w.png" />
+			<part id="middle" path="vscroll/vscroll_thumb_up_content.png" />
+		</image>
+	</item>
+	-->
+
+	<!--
+	<item id="vscroll.thumb.gripper.down">
+		<image>
+			<part id="middle" path="vscroll/vscroll_thumb_gripper_down.png" />
+		</image>
+	</item>
+	-->
+
+	<!--
+	<item id="vscroll.thumb.over">
+		<image>
+			<part id="top.left" path="vscroll/vscroll_thumb_up_nw.png" />
+			<part id="top" path="vscroll/vscroll_thumb_up_n.png" />
+			<part id="top.right" path="vscroll/vscroll_thumb_up_ne.png" />
+			<part id="right" path="vscroll/vscroll_thumb_up_e.png" />
+			<part id="bottom.right" path="vscroll/vscroll_thumb_up_se.png" />
+			<part id="bottom" path="vscroll/vscroll_thumb_up_s.png" />
+			<part id="bottom.left" path="vscroll/vscroll_thumb_up_sw.png" />
+			<part id="left" path="vscroll/vscroll_thumb_up_w.png" />
+			<part id="middle" path="vscroll/vscroll_thumb_up_content.png" />
+		</image>
+	</item>
+	-->
+
+	<!--
+	<item id="vscroll.thumb.gripper.over">
+		<image>
+			<part id="middle" path="vscroll/vscroll_thumb_gripper_over.png" />
+		</image>
+	</item>
+	-->
+	
+	<!--                LISTVIEW SKIN ITEMS                         -->
+	<item id="listview.item.unselected">
+		<image>
+			<part id="right" path="list/list_item_unselected_right.png" />
+			<part id="left" path="list/list_item_unselected_left.png" />
+			<part id="middle" path="list/list_item_unselected_middle.png" />
+		</image>
+	</item>
+
+	
+	<!--                TEXTINPUT SKIN ITEMS                         -->
+	<item id="textinput.normal">
+		<image>
+			<part id="top.left" path="textinput/textinput_normal_nw.png" />
+			<part id="top" path="textinput/textinput_normal_n.png" />
+			<part id="top.right" path="textinput/textinput_normal_ne.png" />
+			<part id="right" path="textinput/textinput_normal_e.png" />
+			<part id="bottom.right" path="textinput/textinput_normal_se.png" />
+			<part id="bottom" path="textinput/textinput_normal_s.png" />
+			<part id="bottom.left" path="textinput/textinput_normal_sw.png" />
+			<part id="left" path="textinput/textinput_normal_w.png" />
+			<part id="middle" path="textinput/textinput_normal_content.png" />
+		</image>
+	</item>
+	
+	<!--                GENERAL SKIN PROPS                         -->
+	<prop id="application.backgroundCol" value="0x161616"/>
+	
+	<!--                BUTTON SKIN PROPS                         -->
+	<prop id="button.size.width" value="90"/>
+	<prop id="button.size.height" value="42"/>
+
+	<!--                TAB SKIN PROPS                         -->
+	<prop id="tab.size.width" value="80"/>
+	<prop id="tab.size.height" value="64"/>
+	<prop id="tab.icon.position" value="top"/>
+	<prop id="tab.icon.size" value="32"/>
+	<prop id="tab.selected.text.col" value="0xFFFFFF"/>
+	<prop id="tab.text.col" value="0xFFFFFF"/>
+	<prop id="tab.font.size" value="13"/>
+
+	<!--                TABBAR SKIN PROPS                         -->
+	<prop id="tabbar.size.height" value="64"/>
+	<prop id="tabbar.padding.left" value="0"/>
+	<prop id="tabbar.padding.top" value="0"/>
+
+	<!--                TABVIEW SKIN PROPS                         -->
+	<prop id="tabview.padding.left" value="3"/>
+	<prop id="tabview.padding.right" value="1"/>
+	<prop id="tabview.padding.top" value="3"/>
+	<prop id="tabview.padding.bottom" value="1"/>
+
+	<!--                VCSROLL SKIN PROPS                         -->
+	<prop id="vscroll.size.width" value="3"/>
+
+	<!--                SCROLLVIEW SKIN PROPS                         -->
+	<prop id="scrollview.scrolls.autoHide" value="true"/>
+
+	<!--                LISTVIEW SKIN PROPS                         -->
+	<prop id="listview.item.height" value="48"/>
+	<prop id="listview.item.font.size" value="20"/>
+	<prop id="listview.item.text.col" value="0xFFFFFF"/>
+	<prop id="listview.item.icon.size" value="32"/>
+</skin>
