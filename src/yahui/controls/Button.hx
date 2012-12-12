@@ -90,7 +90,6 @@ class Button extends Component {
 			upSkin.width = width;
 			upSkin.height = height;
 			upSkin.visible = false;
-			upSkin.alpha = 1;
 			addChild(upSkin);
 		}
 		
@@ -104,7 +103,6 @@ class Button extends Component {
 			overSkin.width = width;
 			overSkin.height = height;
 			overSkin.visible = false;
-			overSkin.alpha = 1;
 			addChild(overSkin);
 		}
 
@@ -118,7 +116,6 @@ class Button extends Component {
 			downSkin.width = width;
 			downSkin.height = height;
 			downSkin.visible = false;
-			downSkin.alpha = 1;
 			addChild(downSkin);
 		}
 

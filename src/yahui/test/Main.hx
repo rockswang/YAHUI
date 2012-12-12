@@ -13,6 +13,7 @@ import yahui.containers.VBox;
 import yahui.controls.Button;
 import yahui.controls.Label;
 import yahui.controls.TabBar;
+import yahui.controls.VScroll;
 import yahui.core.Component;
 import yahui.core.Screen;
 import yahui.skins.SkinHelper;

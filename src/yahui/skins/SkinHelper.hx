@@ -75,14 +75,14 @@ class SkinHelper {
 		var r:String = assetPaths.get("right");
 		var rSize:Rectangle = new Rectangle();
 		if (r != null) {
-			rSize = getBitmapSize(l);
+			rSize = getBitmapSize(r);
 			drawStretchedBitmap(r, new Rectangle(targetRect.width - rSize.width, trSize.height, rSize.width, targetRect.height - (trSize.height + brSize.height)), target);
 		}
 		
 		var m:String = assetPaths.get("middle");
 		var mSize:Rectangle = new Rectangle();
 		if (m != null) {
-			mSize = getBitmapSize(l);
+			mSize = getBitmapSize(m);
 			drawStretchedBitmap(m, new Rectangle(lSize.width, tSize.height, targetRect.width - (lSize.width + rSize.width), targetRect.height - (tSize.height + bSize.height)), target);
 		}
 		
