@@ -175,6 +175,7 @@ class ControlDemo extends Component {
 		
 		{
 			var textInput:TextInput = new TextInput();
+			textInput.text = "Basic input";
 			c.addChild(textInput);
 		}
 		
