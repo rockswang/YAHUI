@@ -10,7 +10,7 @@ import yahui.core.Component;
 import yahui.core.Screen;
 import yahui.skins.SkinManager;
 
-class ScrollView extends Component {
+class ScrollView extends Container {
 	private var backgroundSkin:DisplayObject;
 	private var content:Container;
 	private var mask:Sprite;

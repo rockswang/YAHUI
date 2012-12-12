@@ -70,15 +70,7 @@
 	<!--                TABBAR SKIN ITEMS                         -->
 	<item id="tabbar.background">
 		<image>
-			<part id="top.left" path="tabbar/tabbar_bg_nw.png" />
-			<part id="top" path="tabbar/tabbar_bg_n.png" />
-			<part id="top.right" path="tabbar/tabbar_bg_ne.png" />
-			<part id="right" path="tabbar/tabbar_bg_e.png" />
-			<part id="bottom.right" path="tabbar/tabbar_bg_se.png" />
-			<part id="bottom" path="tabbar/tabbar_bg_s.png" />
-			<part id="bottom.left" path="tabbar/tabbar_bg_sw.png" />
-			<part id="left" path="tabbar/tabbar_bg_w.png" />
-			<part id="middle" path="tabbar/tabbar_bg_content.png" />
+			<part id="middle" path="tabbar/tabbar_bg.png" />
 		</image>
 	</item>
 

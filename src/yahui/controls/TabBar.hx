@@ -171,7 +171,7 @@ class TabBar extends Component {
 
 	private function onMouseMove(event:MouseEvent):Void {
 		trace("tab bar on mouse move");
-		if (mouseDown == true) {
+		if (mouseDown == true && tabContainer.actualWidth > width) {
 			scrollX += -(mouseEventPos.x - event.stageX);
 			//if (Math.abs(scrollX) >= 3) {
 				eventTarget.visible = true;

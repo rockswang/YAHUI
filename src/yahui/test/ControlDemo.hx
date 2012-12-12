@@ -31,7 +31,7 @@ class ControlDemo extends Component {
 		tabView.addPage("Basic", createPage_BASIC(), "icons.files.gif");
 		tabView.addPage("List", createPage_LIST(), "icons.files.text");
 		tabView.addPage("Scrolls", createPage_SCROLLS(), "icons.files.blank");
-		for (n in 0...20) {
+		for (n in 0...0) {
 			tabView.addPage("Tab " + n, createPage("page " + n), "icons.files.blank");
 		}
 	}
@@ -107,8 +107,8 @@ class ControlDemo extends Component {
 	
 	
 	private function createPage_BASIC():Container {
-		var c:Container = new VBox();
-		c.spacing = 5;
+		var c:Container = new ScrollView();
+		//c.spacing = 5;
 		
 		{
 			var hbox:HBox = new HBox();
