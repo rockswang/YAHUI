@@ -58,6 +58,8 @@ class BasicSkin extends Skin {
 			path = "icons/file_text_";
 		} else if (id == "icons.user") {
 			path = "icons/user_";
+		} else if (id == "icons.folders.open") {
+			path = "icons/folder_open_";
 		}
 		
 		if (path != null) {

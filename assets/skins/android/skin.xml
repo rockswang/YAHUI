@@ -134,5 +134,10 @@
 	<sound id="button.click" path="audio/TW_Touch.ogg"/>
 	
 	<!-- SKIN ICONS -->
+	<icon id="icons.home" size="32" path="icons/home_32.png"/>
+	<icon id="icons.search" size="32" path="icons/search_32.png"/>
+	<icon id="icons.settings" size="32" path="icons/settings_32.png"/>
+	<icon id="icons.user" size="32" path="icons/user_32.png"/>
 	<icon id="icons.favs" size="32" path="icons/fav_32.png"/>
+	<icon id="icons.folders.open" size="32" path="icons/folder_open_32.png"/>
 </skin>

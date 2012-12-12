@@ -29,9 +29,10 @@ class ControlDemo extends Component {
 	public override function createChildren():Void {
 		addChild(tabView);
 		
-		tabView.addPage("Basic", createPage_BASIC(), "icons.favs");
-		tabView.addPage("List", createPage_LIST(), "icons.favs");
-		tabView.addPage("Scrolls", createPage_SCROLLS(), "icons.favs");
+		tabView.addPage("Basic", createPage_BASIC(), "icons.home");
+		tabView.addPage("List", createPage_LIST(), "icons.folders.open");
+		tabView.addPage("Scrolls", createPage_SCROLLS(), "icons.settings");
+		tabView.addPage("Test", createPage("Search page"), "icons.search");
 		for (n in 0...10) {
 			tabView.addPage("Tab " + n, createPage("page " + n), "icons.favs");
 		}
