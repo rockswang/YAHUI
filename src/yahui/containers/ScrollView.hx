@@ -138,11 +138,6 @@ class ScrollView extends Container {
 	}
 
 	private function onMouseDown(event:MouseEvent):Void {
-		if (autoHideScroll == true && vscroll != null) {
-			if (content.actualHeight > height) {
-				vscroll.visible = true;
-			}
-		}
 		eventTarget.visible = true;
 		mouseEventPos = new Point(event.stageX, event.stageY);
 		mouseDown = true;
@@ -152,6 +147,12 @@ class ScrollView extends Container {
 	
 	private function onMouseMove(event:MouseEvent):Void {
 		if (mouseDown == true) {
+			if (autoHideScroll == true && vscroll != null) {
+				if (content.actualHeight > height) {
+					vscroll.visible = true;
+				}
+			}
+		
 			if (content.actualHeight > height) {
 				scrollY += mouseEventPos.y - event.stageY;
 				if (scrollY < 0) {
