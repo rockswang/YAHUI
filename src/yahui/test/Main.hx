@@ -47,7 +47,7 @@ class Main extends Sprite {
 	
 	private function changeSkin(skinPath:String):Void {
 		currentSkin = skinPath;
-		trace("changing skin: " + skinPath);
+		//trace("changing skin: " + skinPath);
 		SkinManager.loadSkinXML(skinPath);
 		Screen.init();
 		

@@ -57,7 +57,7 @@ class XMLSkin extends BasicSkin {
 	//                  LOAD FROM XML TEXT
 	//************************************************************
 	public function loadXML(xmlAssetPath:String):Void {
-		trace(">> Loading skin xml from: " + xmlAssetPath);
+		//trace(">> Loading skin xml from: " + xmlAssetPath);
 		
 		var n:Int = xmlAssetPath.lastIndexOf("/");
 		basePath = xmlAssetPath.substr(0, n + 1);

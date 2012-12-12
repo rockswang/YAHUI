@@ -27,7 +27,7 @@ class Component implements IEventDispatcher {
 	
 	public function new() {
 		componentCount++;
-		trace("" + componentCount + " component(s)");
+		//trace("" + componentCount + " component(s)");
 		
 		childComponents = new Array<Component>();
 		sprite = new Sprite();
