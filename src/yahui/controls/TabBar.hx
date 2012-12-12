@@ -152,7 +152,6 @@ class TabBar extends Component {
 	}
 	
 	private function onMouseDown(event:MouseEvent):Void {
-		trace("tab bar on mouse down");
 		mouseEventPos = new Point(event.stageX, event.stageY);
 		mouseDown = true;
 		Screen.addEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
@@ -161,7 +160,6 @@ class TabBar extends Component {
 	}
 
 	private function onMouseUp(event:MouseEvent):Void {
-		trace("tab bar on mouse up");
 		mouseDown = false;
 		Screen.removeEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
 		Screen.removeEventListener(MouseEvent.MOUSE_UP, onMouseUp);
@@ -170,25 +168,12 @@ class TabBar extends Component {
 	}
 
 	private function onMouseMove(event:MouseEvent):Void {
-		trace("tab bar on mouse move");
 		if (mouseDown == true && tabContainer.actualWidth > width) {
 			scrollX += -(mouseEventPos.x - event.stageX);
-			//if (Math.abs(scrollX) >= 3) {
-				eventTarget.visible = true;
-			//}
-			//if (-scrollX < tabContainer.actualWidth) {
-				//scrollX = 0;
-			//}
+			eventTarget.visible = true;
 			
 			var maxWidth:Float = width; // content.actualHeight;
-			/*
-			if (scrollX > maxWidth - width) {
-				scrollX = maxWidth - width;
-			}
-			*/
-			
-			//vscroll.value = scrollY;
-			
+
 			if (scrollX > padding.left) {
 				scrollX = padding.left;
 			}

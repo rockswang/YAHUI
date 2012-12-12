@@ -31,7 +31,7 @@ class ControlDemo extends Component {
 		tabView.addPage("Basic", createPage_BASIC(), "icons.files.gif");
 		tabView.addPage("List", createPage_LIST(), "icons.files.text");
 		tabView.addPage("Scrolls", createPage_SCROLLS(), "icons.files.blank");
-		for (n in 0...0) {
+		for (n in 0...10) {
 			tabView.addPage("Tab " + n, createPage("page " + n), "icons.files.blank");
 		}
 	}
