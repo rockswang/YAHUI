@@ -115,7 +115,7 @@ class ScrollView extends Container {
 				vscroll.y = padding.top;
 				vscroll.height = height - (padding.top + padding.bottom);
 				vscroll.addEventListener(Event.CHANGE, onVScrollChange);
-				if (autoHideScroll == true) {
+				if (autoHideScroll == true || content.actualHeight < height) {
 					vscroll.visible = false;
 				}
 				super.addChild(vscroll);
@@ -139,7 +139,9 @@ class ScrollView extends Container {
 
 	private function onMouseDown(event:MouseEvent):Void {
 		if (autoHideScroll == true && vscroll != null) {
-			vscroll.visible = true;
+			if (content.actualHeight > height) {
+				vscroll.visible = true;
+			}
 		}
 		eventTarget.visible = true;
 		mouseEventPos = new Point(event.stageX, event.stageY);
@@ -150,17 +152,19 @@ class ScrollView extends Container {
 	
 	private function onMouseMove(event:MouseEvent):Void {
 		if (mouseDown == true) {
-			scrollY += mouseEventPos.y - event.stageY;
-			if (scrollY < 0) {
-				scrollY = 0;
+			if (content.actualHeight > height) {
+				scrollY += mouseEventPos.y - event.stageY;
+				if (scrollY < 0) {
+					scrollY = 0;
+				}
+				var maxHeight:Float = content.actualHeight;
+				if (scrollY > maxHeight - height) {
+					scrollY = maxHeight - height;
+				}
+				
+				vscroll.value = scrollY;
+				content.y = -scrollY;
 			}
-			var maxHeight:Float = content.actualHeight;
-			if (scrollY > maxHeight - height) {
-				scrollY = maxHeight - height;
-			}
-			
-			vscroll.value = scrollY;
-			content.y = -scrollY;
 			
 			mouseEventPos = new Point(event.stageX, event.stageY);
 		}
