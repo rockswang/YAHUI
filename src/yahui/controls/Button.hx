@@ -4,6 +4,7 @@ import nme.display.DisplayObject;
 import nme.display.Sprite;
 import nme.events.MouseEvent;
 import nme.Lib;
+import nme.media.Sound;
 import yahui.core.Component;
 import yahui.core.Screen;
 import yahui.skins.SkinManager;
@@ -16,6 +17,7 @@ class Button extends Component {
 	public var downSkinId:String = "button.down";
 	public var text:String = " ";
 	public var iconId:String;
+	public var clickSoundId:String = "button.click";
 	
 	// skin objects
 	private var upSkin:DisplayObject;
@@ -188,7 +190,7 @@ class Button extends Component {
 			#if android
 				showState("up");
 			#else
-				if (mouseIn == true) {
+				if (mouseIn == true && overSkin != null) {
 					showState("over");
 				} else {
 					showState("up");
@@ -205,6 +207,11 @@ class Button extends Component {
 			} else {
 				showState("up");
 			}
+		}
+
+		var sound:Sound = SkinManager.skin.getSkinSound(clickSoundId);
+		if (sound != null) {
+			sound.play();
 		}
 	}
 	

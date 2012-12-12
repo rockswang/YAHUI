@@ -1,5 +1,6 @@
 package yahui.test;
 
+import nme.Assets;
 import nme.display.Bitmap;
 import nme.display.BitmapData;
 import nme.display.DisplayObject;
@@ -8,6 +9,7 @@ import nme.events.Event;
 import nme.events.MouseEvent;
 import nme.geom.Rectangle;
 import nme.Lib;
+import nme.media.Sound;
 import yahui.containers.HBox;
 import yahui.containers.VBox;
 import yahui.controls.Button;
@@ -52,7 +54,6 @@ class Main extends Sprite {
 		Screen.init();
 		
 		////////////// TEST STUFF
-		
 		var controlDemo:ControlDemo = new ControlDemo();
 		controlDemo.y = 0;
 		controlDemo.width = Screen.component.width;

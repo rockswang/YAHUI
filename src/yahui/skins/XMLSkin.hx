@@ -2,17 +2,20 @@ package yahui.skins;
 import nme.Assets;
 import nme.display.DisplayObject;
 import nme.geom.Rectangle;
+import nme.media.Sound;
 
 class XMLSkin extends BasicSkin {
 	private var basePath:String;
 	private var items:Hash<XMLSkinItem>;
 	private var props:Hash<String>;
+	private var sounds:Hash<String>;
 	
 	public function new() {
 		super();
 		
 		items = new Hash<XMLSkinItem>();
 		props = new Hash<String>();
+		sounds = new Hash<String>();
 	}
 
 	//************************************************************
@@ -53,6 +56,16 @@ class XMLSkin extends BasicSkin {
 		return icon;
 	}
 	
+	public override function getSkinSound(id:String):Sound {
+		var sound:Sound = super.getSkinSound(id);
+		var soundPath:String = sounds.get(id);
+		if (soundPath != null) {
+			var fixedPath:String = basePath + soundPath;
+			sound = Assets.getSound(fixedPath);
+		}
+		
+		return sound;
+	}
 	//************************************************************
 	//                  LOAD FROM XML TEXT
 	//************************************************************
@@ -74,6 +87,12 @@ class XMLSkin extends BasicSkin {
 					var propValue:String = child.get("value");
 					if (propId != null && propValue != null && propId.length > 0 && propValue.length > 0) {
 						props.set(propId, propValue);
+					}
+				} else if (child.nodeName == "sound") {
+					var soundId:String = child.get("id");
+					var soundPath:String = child.get("path");
+					if (soundId != null && soundPath != null && soundId.length > 0 && soundPath.length > 0) {
+						sounds.set(soundId, soundPath);
 					}
 				}
 			}

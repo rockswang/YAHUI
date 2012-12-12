@@ -16,22 +16,6 @@
 		</image>
 	</item>
 
-	<!--
-	<item id="button.over">
-		<image>
-			<part id="top.left" path="button/button_over_nw.png" />
-			<part id="top" path="button/button_over_n.png" />
-			<part id="top.right" path="button/button_over_ne.png" />
-			<part id="right" path="button/button_over_e.png" />
-			<part id="bottom.right" path="button/button_over_se.png" />
-			<part id="bottom" path="button/button_over_s.png" />
-			<part id="bottom.left" path="button/button_over_sw.png" />
-			<part id="left" path="button/button_over_w.png" />
-			<part id="middle" path="button/button_over_content.png" />
-		</image>
-	</item>
-	-->
-
 	<item id="button.down">
 		<image>
 			<part id="top.left" path="button/button_down_nw.png" />
@@ -53,14 +37,6 @@
 		</image>
 	</item>
 
-	<!--
-	<item id="tab.unselected.over">
-		<image>
-			<part id="middle" path="tabs/tab_unselected_bg.png" />
-		</image>
-	</item>
-	-->
-
 	<item id="tab.selected.up">
 		<image>
 			<part id="middle" path="tabs/tab_selected_bg.png" />
@@ -74,14 +50,6 @@
 		</image>
 	</item>
 
-	<!--                VSCROLL SKIN ITEMS                         -->
-	<!--
-	<item id="vscroll.background">
-		<image>
-			<part id="middle" path="vscroll/vscroll_bg.png" />
-		</image>
-	</item>
-	-->
 
 	<!--                VSCROLL SKIN ITEMS                         -->
 	<item id="vscroll.thumb.up">
@@ -98,62 +66,6 @@
 		</image>
 	</item>
 
-	<!--
-	<item id="vscroll.thumb.gripper.up">
-		<image>
-			<part id="middle" path="vscroll/vscroll_thumb_gripper_up.png" />
-		</image>
-	</item>
-	-->
-
-	<!--
-	<item id="vscroll.thumb.down">
-		<image>
-			<part id="top.left" path="vscroll/vscroll_thumb_up_nw.png" />
-			<part id="top" path="vscroll/vscroll_thumb_up_n.png" />
-			<part id="top.right" path="vscroll/vscroll_thumb_up_ne.png" />
-			<part id="right" path="vscroll/vscroll_thumb_up_e.png" />
-			<part id="bottom.right" path="vscroll/vscroll_thumb_up_se.png" />
-			<part id="bottom" path="vscroll/vscroll_thumb_up_s.png" />
-			<part id="bottom.left" path="vscroll/vscroll_thumb_up_sw.png" />
-			<part id="left" path="vscroll/vscroll_thumb_up_w.png" />
-			<part id="middle" path="vscroll/vscroll_thumb_up_content.png" />
-		</image>
-	</item>
-	-->
-
-	<!--
-	<item id="vscroll.thumb.gripper.down">
-		<image>
-			<part id="middle" path="vscroll/vscroll_thumb_gripper_down.png" />
-		</image>
-	</item>
-	-->
-
-	<!--
-	<item id="vscroll.thumb.over">
-		<image>
-			<part id="top.left" path="vscroll/vscroll_thumb_up_nw.png" />
-			<part id="top" path="vscroll/vscroll_thumb_up_n.png" />
-			<part id="top.right" path="vscroll/vscroll_thumb_up_ne.png" />
-			<part id="right" path="vscroll/vscroll_thumb_up_e.png" />
-			<part id="bottom.right" path="vscroll/vscroll_thumb_up_se.png" />
-			<part id="bottom" path="vscroll/vscroll_thumb_up_s.png" />
-			<part id="bottom.left" path="vscroll/vscroll_thumb_up_sw.png" />
-			<part id="left" path="vscroll/vscroll_thumb_up_w.png" />
-			<part id="middle" path="vscroll/vscroll_thumb_up_content.png" />
-		</image>
-	</item>
-	-->
-
-	<!--
-	<item id="vscroll.thumb.gripper.over">
-		<image>
-			<part id="middle" path="vscroll/vscroll_thumb_gripper_over.png" />
-		</image>
-	</item>
-	-->
-	
 	<!--                LISTVIEW SKIN ITEMS                         -->
 	<item id="listview.item.unselected">
 		<image>
@@ -163,7 +75,6 @@
 		</image>
 	</item>
 
-	
 	<!--                TEXTINPUT SKIN ITEMS                         -->
 	<item id="textinput.normal">
 		<image>
@@ -217,4 +128,8 @@
 	<prop id="listview.item.font.size" value="20"/>
 	<prop id="listview.item.text.col" value="0xFFFFFF"/>
 	<prop id="listview.item.icon.size" value="32"/>
+	
+	<!-- SKIN SOUNDS -->
+	<sound id="tab.click" path="audio/TW_Touch.ogg"/>
+	<sound id="button.click" path="audio/TW_Touch.ogg"/>
 </skin>

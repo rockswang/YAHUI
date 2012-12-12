@@ -1,6 +1,7 @@
 package yahui.skins;
 
 import nme.display.DisplayObject;
+import nme.media.Sound;
 
 class Skin {
 	public function new() {
@@ -22,6 +23,9 @@ class Skin {
 		return null;
 	}
 	
+	public function getSkinSound(id:String):Sound {
+		return null;
+	}
 	//************************************************************
 	//                  HELPERS
 	//************************************************************

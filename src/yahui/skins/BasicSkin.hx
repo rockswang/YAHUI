@@ -3,6 +3,7 @@ import nme.Assets;
 import nme.display.Bitmap;
 import nme.display.DisplayObject;
 import nme.display.Sprite;
+import nme.media.Sound;
 
 class BasicSkin extends Skin {
 	public function new() {
@@ -71,5 +72,9 @@ class BasicSkin extends Skin {
 		}
 		
 		return icon;
+	}
+
+	public override function getSkinSound(id:String):Sound {
+		return null;
 	}
 }

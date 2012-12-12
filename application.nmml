@@ -3,7 +3,7 @@
 	<!-- NMML reference: https://gist.github.com/1763850 -->
 	
 	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
-	<meta title="Yet Another haXe UI" package="yahui.test.YAHUI" version="1.0.0" company="Ian Harrigan" />
+	<meta title="YAHUI" package="yahui.test.YAHUI" version="1.0.0" company="Ian Harrigan" />
 	
 	<!-- output -->
 	<app main="yahui.test.Main" file="YAHUI" path="bin" />
@@ -26,6 +26,9 @@
 	<assets path="assets/img" rename="img" />
 	<assets path="assets/skins" rename="skins" />
 	<assets path="assets/icons" rename="icons" />
+	
+	<!-- for skin sounds -->
+	<assets path="assets/skins/android/audio" rename="assets/skins/android/audio" type="sound" include="*" />	
 	
 	<!-- DLLs -->
 	<ndll name="std" />

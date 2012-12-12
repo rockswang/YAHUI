@@ -103,6 +103,7 @@ class TabBar extends Component {
 		button.upSkinId = "tab.unselected.up";
 		button.overSkinId = "tab.unselected.over";
 		button.downSkinId = "tab.selected.up";
+		button.clickSoundId = "tab.click";
 		button.text = text;
 		button.iconId = iconId;
 		if (buttons.length == 0 && selectedIndex == 0)  {
