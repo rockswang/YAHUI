@@ -1,4 +1,5 @@
 package yahui.test;
+import nme.events.Event;
 import nme.events.MouseEvent;
 import nme.Lib;
 import yahui.containers.Container;
@@ -56,7 +57,7 @@ class ControlDemo extends Component {
 		var scrollView:ListView = new ListView();
 		scrollView.x = 0;
 		scrollView.width = width - (SkinManager.skin.getSkinPropInt("tabview.padding.left", 0) + SkinManager.skin.getSkinPropInt("tabview.padding.right", 0));
-		scrollView.height = height - SkinManager.skin.getSkinPropInt("tabbar.size.height", 0) - (SkinManager.skin.getSkinPropInt("tabview.padding.top", 0) + SkinManager.skin.getSkinPropInt("tabview.padding.bottom", 0) + SkinManager.skin.getSkinPropInt("button.size.height", 0) + 6);
+		scrollView.height = height - SkinManager.skin.getSkinPropInt("tabbar.size.height", 0) - (SkinManager.skin.getSkinPropInt("tabview.padding.top", 0) + SkinManager.skin.getSkinPropInt("tabview.padding.bottom", 0));
 		for (n in 0...20) {
 			scrollView.addBasicItem("List item " + n, "icons.user");
 			/*
@@ -94,7 +95,7 @@ class ControlDemo extends Component {
 		var scrollView:ScrollView = new ScrollView();
 		scrollView.x = 500;
 		scrollView.width = 150;
-		scrollView.height = height - SkinManager.skin.getSkinPropInt("tabbar.size.height", 0) - (SkinManager.skin.getSkinPropInt("tabview.padding.top", 0) + SkinManager.skin.getSkinPropInt("tabview.padding.bottom", 0) + SkinManager.skin.getSkinPropInt("button.size.height", 0) + 6);
+		scrollView.height = height - SkinManager.skin.getSkinPropInt("tabbar.size.height", 0) - (SkinManager.skin.getSkinPropInt("tabview.padding.top", 0) + SkinManager.skin.getSkinPropInt("tabview.padding.bottom", 0));
 		for (n in 0...20) {
 			var button:Button = new Button();
 			button.text = "Button " + n;
@@ -115,6 +116,42 @@ class ControlDemo extends Component {
 			hbox.spacing = 5;
 			
 			var button:Button = new Button();
+			button.text = "Windows";
+			button.toggle = true;
+			button.selected = (Main.currentSkin == Main.WINDOWS_SKIN);
+			button.addEventListener(MouseEvent.CLICK, function (e) {
+				Main.setSkin(Main.WINDOWS_SKIN);
+			});
+			hbox.addChild(button);
+
+			var button:Button = new Button();
+			button.text = "Android";
+			button.toggle = true;
+			button.selected = (Main.currentSkin == Main.ANDROID_SKIN);
+			button.addEventListener(MouseEvent.CLICK, function (e) {
+				Main.setSkin(Main.ANDROID_SKIN);
+			});
+			hbox.addChild(button);
+
+			var button:Button = new Button();
+			button.text = "iPhone";
+			button.toggle = true;
+			button.selected = (Main.currentSkin == Main.IPHONE_SKIN);
+			button.addEventListener(MouseEvent.CLICK, function (e) {
+				Main.setSkin(Main.IPHONE_SKIN);
+			});
+			hbox.addChild(button);
+			
+			hbox.height = button.height;
+			
+			c.addChild(hbox);
+		}
+		
+		{
+			var hbox:HBox = new HBox();
+			hbox.spacing = 5;
+			
+			var button:Button = new Button();
 			button.text = "Exit";
 			button.addEventListener(MouseEvent.CLICK, function (e) {
 				Lib.exit();
@@ -124,6 +161,8 @@ class ControlDemo extends Component {
 			var button:Button = new Button();
 			button.text = "Icon";
 			button.iconId = "icons.home";
+			button.addEventListener(MouseEvent.CLICK, function (e) {
+			});
 			hbox.addChild(button);
 			
 			hbox.height = button.height;

@@ -19,11 +19,11 @@ import yahui.skins.SkinHelper;
 import yahui.skins.SkinManager;
 
 class Main extends Sprite {
-	private static var WINDOWS_SKIN:String = "skins/windows/skin.xml";
-	private static var ANDROID_SKIN:String = "skins/android/skin.xml";
-	private static var IPHONE_SKIN:String = "skins/iphone/skin.xml";
+	public static var WINDOWS_SKIN:String = "skins/windows/skin.xml";
+	public static var ANDROID_SKIN:String = "skins/android/skin.xml";
+	public static var IPHONE_SKIN:String = "skins/iphone/skin.xml";
 	
-	private static var currentSkin = ANDROID_SKIN;
+	public static var currentSkin = ANDROID_SKIN;
 	
 	public function new() {
 		super();
@@ -34,7 +34,7 @@ class Main extends Sprite {
 		#end
 	}
 
-	private function init(e) {
+	public function init(e) {
 		#if iphone
 			Lib.current.stage.removeEventListener(Event.RESIZE, init);
 		#else
@@ -53,12 +53,13 @@ class Main extends Sprite {
 		////////////// TEST STUFF
 		
 		var controlDemo:ControlDemo = new ControlDemo();
-		controlDemo.y = SkinManager.skin.getSkinPropInt("button.size.height", 0) + 6;
+		controlDemo.y = 0;
 		controlDemo.width = Screen.component.width;
 		controlDemo.height = Screen.component.height;
 		Screen.component.addChild(controlDemo);
 		
 		// TODO: if buttons arent last in the display list and a list is scrolled then events get lost
+		/*
 		var hbox:HBox = new HBox();
 		hbox.x = 3;
 		hbox.y = 3;
@@ -92,6 +93,12 @@ class Main extends Sprite {
 		hbox.addChild(button);
 		
 		Screen.component.addChild(hbox);
+		*/
+	}
+	
+	public static function setSkin(skin:String):Void {
+		Main.currentSkin = skin;
+		new Main().init(new Event(""));		
 	}
 	
 	static public function main() {
