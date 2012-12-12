@@ -132,4 +132,7 @@
 	<!-- SKIN SOUNDS -->
 	<sound id="tab.click" path="audio/TW_Touch.ogg"/>
 	<sound id="button.click" path="audio/TW_Touch.ogg"/>
+	
+	<!-- SKIN ICONS -->
+	<icon id="icons.favs" size="32" path="icons/fav_32.png"/>
 </skin>

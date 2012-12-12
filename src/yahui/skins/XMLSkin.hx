@@ -1,5 +1,6 @@
 package yahui.skins;
 import nme.Assets;
+import nme.display.Bitmap;
 import nme.display.DisplayObject;
 import nme.geom.Rectangle;
 import nme.media.Sound;
@@ -9,6 +10,7 @@ class XMLSkin extends BasicSkin {
 	private var items:Hash<XMLSkinItem>;
 	private var props:Hash<String>;
 	private var sounds:Hash<String>;
+	private var icons:Hash<String>;
 	
 	public function new() {
 		super();
@@ -16,6 +18,7 @@ class XMLSkin extends BasicSkin {
 		items = new Hash<XMLSkinItem>();
 		props = new Hash<String>();
 		sounds = new Hash<String>();
+		icons = new Hash<String>();
 	}
 
 	//************************************************************
@@ -52,7 +55,16 @@ class XMLSkin extends BasicSkin {
 	}
 	
 	public override function getSkinIcon(id:String, size:Int):DisplayObject {
-		var icon:DisplayObject = super.getSkinIcon(id, size);
+		var icon:DisplayObject = null;
+		
+		var iconPath:String = icons.get(id + "_" + size);
+		if (iconPath != null) {
+			var fixedPath:String = basePath + iconPath;
+			icon = new Bitmap(Assets.getBitmapData(fixedPath));
+		} else {
+			icon = super.getSkinIcon(id, size);
+		}
+		
 		return icon;
 	}
 	
@@ -93,6 +105,13 @@ class XMLSkin extends BasicSkin {
 					var soundPath:String = child.get("path");
 					if (soundId != null && soundPath != null && soundId.length > 0 && soundPath.length > 0) {
 						sounds.set(soundId, soundPath);
+					}
+				} else if (child.nodeName == "icon") {
+					var iconId:String = child.get("id");
+					var iconSize:String = child.get("size");
+					var iconPath:String = child.get("path");
+					if (iconId != null && iconSize != null && iconPath != null && iconId.length > 0 && iconPath.length > 0 && iconPath.length > 0) {
+						icons.set(iconId + "_" + iconSize, iconPath);
 					}
 				}
 			}

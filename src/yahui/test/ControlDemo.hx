@@ -29,11 +29,11 @@ class ControlDemo extends Component {
 	public override function createChildren():Void {
 		addChild(tabView);
 		
-		tabView.addPage("Basic", createPage_BASIC(), "icons.files.gif");
-		tabView.addPage("List", createPage_LIST(), "icons.files.text");
-		tabView.addPage("Scrolls", createPage_SCROLLS(), "icons.files.blank");
+		tabView.addPage("Basic", createPage_BASIC(), "icons.favs");
+		tabView.addPage("List", createPage_LIST(), "icons.favs");
+		tabView.addPage("Scrolls", createPage_SCROLLS(), "icons.favs");
 		for (n in 0...10) {
-			tabView.addPage("Tab " + n, createPage("page " + n), "icons.files.blank");
+			tabView.addPage("Tab " + n, createPage("page " + n), "icons.favs");
 		}
 	}
 	
