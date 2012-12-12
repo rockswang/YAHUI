@@ -109,6 +109,8 @@ class ControlDemo extends Component {
 	
 	private function createPage_BASIC():Container {
 		var c:Container = new ScrollView();
+		c.width = width - (SkinManager.skin.getSkinPropInt("tabview.padding.left", 0) + SkinManager.skin.getSkinPropInt("tabview.padding.right", 0));
+		c.height = height - SkinManager.skin.getSkinPropInt("tabbar.size.height", 0) - (SkinManager.skin.getSkinPropInt("tabview.padding.top", 0) + SkinManager.skin.getSkinPropInt("tabview.padding.bottom", 0));
 		//c.spacing = 5;
 		
 		{
