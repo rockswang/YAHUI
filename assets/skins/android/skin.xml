@@ -90,6 +90,25 @@
 		</image>
 	</item>
 	
+	<!--                CHECKBOX SKIN ITEMS                         -->
+	<item id="checkbox.checked.up">
+		<image>
+			<part id="middle" path="checkbox/checkbox_checked_up.png" />
+		</image>
+	</item>
+
+	<item id="checkbox.checked.down">
+		<image>
+			<part id="middle" path="checkbox/checkbox_checked_down.png" />
+		</image>
+	</item>
+
+	<item id="checkbox.unchecked.up">
+		<image>
+			<part id="middle" path="checkbox/checkbox_unchecked_up.png" />
+		</image>
+	</item>
+	
 	<!--                GENERAL SKIN PROPS                         -->
 	<prop id="application.backgroundCol" value="0x161616"/>
 	

@@ -9,6 +9,7 @@ import yahui.containers.ScrollView;
 import yahui.containers.TabView;
 import yahui.containers.VBox;
 import yahui.controls.Button;
+import yahui.controls.CheckBox;
 import yahui.controls.Image;
 import yahui.controls.Label;
 import yahui.controls.TabBar;
@@ -40,6 +41,8 @@ class ControlDemo extends Component {
 	
 	private function createPage(name:String):Container {
 		var c:Container = new Container();
+		c.width = width - (SkinManager.skin.getSkinPropInt("tabview.padding.left", 0) + SkinManager.skin.getSkinPropInt("tabview.padding.right", 0));
+		c.height = height - SkinManager.skin.getSkinPropInt("tabbar.size.height", 0) - (SkinManager.skin.getSkinPropInt("tabview.padding.top", 0) + SkinManager.skin.getSkinPropInt("tabview.padding.bottom", 0));
 		var label:Label = new Label();
 		label.text = name;
 		c.addChild(label);
@@ -215,6 +218,9 @@ class ControlDemo extends Component {
 			button.selected = true;
 			button.width = button.height;
 			hbox.addChild(button);
+			
+			var checkbox:CheckBox = new CheckBox();
+			hbox.addChild(checkbox);
 			
 			hbox.height = button.height;
 			
