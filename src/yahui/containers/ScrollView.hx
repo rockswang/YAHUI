@@ -55,6 +55,7 @@ class ScrollView extends Container {
 		super.addChild(eventTarget);
 		super.addChild(content);
 		
+		mask.graphics.clear();
 		mask.graphics.beginFill(0xFF00FF);
 		mask.graphics.lineStyle(0);
 		mask.graphics.drawRect(0, 0, width, height);
@@ -91,6 +92,7 @@ class ScrollView extends Container {
 		
 		mask.width = width;
 		mask.height = height;
+		mask.graphics.clear();
 		mask.graphics.beginFill(0xFF00FF);
 		mask.graphics.lineStyle(0);
 		mask.graphics.drawRect(0, 0, width, height);

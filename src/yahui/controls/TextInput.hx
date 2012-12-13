@@ -1,6 +1,7 @@
 package yahui.controls;
 
 import nme.display.DisplayObject;
+import nme.display.Sprite;
 import nme.geom.Rectangle;
 import nme.text.TextField;
 import nme.text.TextFieldType;
@@ -15,6 +16,7 @@ class TextInput extends Component {
 	private var normalSkin:DisplayObject;
 	
 	private var textControl:TextField;
+	private var mask:Sprite; // need to mask the text field otherwise it scrolls over the background (seems like an nme bug)
 	
 	// text props
 	public var textCol:Int = 0x000000;
@@ -30,6 +32,7 @@ class TextInput extends Component {
 		height = 40;
 		
 		textControl = new TextField();
+		mask = new Sprite();
 		padding = new Rectangle();
 		padding.left = SkinManager.skin.getSkinPropInt("textinput.padding.left", 0);
 		padding.top = SkinManager.skin.getSkinPropInt("textinput.padding.top", 0);
@@ -53,6 +56,14 @@ class TextInput extends Component {
 		#end
 		addChild(textControl);
 		textControl.text = text;
+
+		mask.graphics.clear();
+		mask.graphics.beginFill(0xFF00FF);
+		mask.graphics.lineStyle(0);
+		mask.graphics.drawRect(0, 0, width, height);
+		mask.graphics.endFill();
+		textControl.mask = mask;
+		super.addChild(mask);
 	}
 	
 	private override function resize():Void {
@@ -68,6 +79,15 @@ class TextInput extends Component {
 			normalSkin.height = height;
 			addChild(normalSkin);
 		}
+		
+		mask.width = width;
+		mask.height = height;
+		mask.graphics.clear();
+		mask.graphics.beginFill(0xFF00FF);
+		mask.graphics.lineStyle(0);
+		mask.graphics.drawRect(0, 0, width, height);
+		textControl.mask = mask;
+		mask.graphics.endFill();
 		
 		textControl.width = width - (padding.left + padding.right);
 		textControl.height = textControl.textHeight + 6;
