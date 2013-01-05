@@ -11,6 +11,7 @@
 	<window background="#FFFFFF" fps="30" />
 	<window width="800" height="480" unless="mobile" />
 	<window orientation="landscape" vsync="true" antialiasing="0" if="cpp" />
+	<window fullscreen="false" if="android" />
 	
 	<!-- classpath, haxe libs -->
 	<source path="src" />

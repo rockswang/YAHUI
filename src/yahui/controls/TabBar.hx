@@ -24,7 +24,6 @@ class TabBar extends Component {
 	
 	// container for tabs
 	private var tabContainer:Container;
-	private var backgroundSkin:DisplayObject;
 
 	// event target
 	public var eventTarget:Sprite;

@@ -26,7 +26,7 @@ class Main extends Sprite {
 	public static var ANDROID_SKIN:String = "skins/android/skin.xml";
 	public static var IPHONE_SKIN:String = "skins/iphone/skin.xml";
 	
-	public static var currentSkin = ANDROID_SKIN;
+	public static var currentSkin = WINDOWS_SKIN;
 	
 	public function new() {
 		super();
@@ -54,11 +54,19 @@ class Main extends Sprite {
 		Screen.init();
 		
 		////////////// TEST STUFF
+		/*
 		var controlDemo:ControlDemo = new ControlDemo();
 		controlDemo.y = 0;
 		controlDemo.width = Screen.component.width;
 		controlDemo.height = Screen.component.height;
 		Screen.component.addChild(controlDemo);
+		*/
+
+		var socialDemo:SocialAppDemo = new SocialAppDemo();
+		socialDemo.y = 0;
+		socialDemo.width = Screen.component.width;
+		socialDemo.height = Screen.component.height;
+		Screen.component.addChild(socialDemo);
 		
 		// TODO: if buttons arent last in the display list and a list is scrolled then events get lost
 		/*

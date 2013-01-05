@@ -44,8 +44,6 @@ class ListView extends ScrollView {
 //                  PRIVATE CLASSES
 //************************************************************
 private class ListItem extends Component {
-	private var backgroundSkin:DisplayObject;
-	
 	public function new() {
 		super();
 

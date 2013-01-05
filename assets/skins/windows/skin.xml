@@ -200,6 +200,40 @@
 		</image>
 	</item>
 	
+	<!--                CHECKBOX SKIN ITEMS                         -->
+	<item id="checkbox.checked.up">
+		<image>
+			<part id="middle" path="checkbox/checkbox_checked_up.png" />
+		</image>
+	</item>
+
+	<item id="checkbox.checked.down">
+		<image>
+			<part id="middle" path="checkbox/checkbox_checked_down.png" />
+		</image>
+	</item>
+
+	<item id="checkbox.unchecked.up">
+		<image>
+			<part id="middle" path="checkbox/checkbox_unchecked_up.png" />
+		</image>
+	</item>
+	
+	<!--                CONTAINER SKIN ITEMS                         -->
+	<item id="container.background">
+		<image>
+			<part id="top.left" path="container/container_nw.png" />
+			<part id="top" path="container/container_n.png" />
+			<part id="top.right" path="container/container_ne.png" />
+			<part id="right" path="container/container_e.png" />
+			<part id="bottom.right" path="container/container_se.png" />
+			<part id="bottom" path="container/container_s.png" />
+			<part id="bottom.left" path="container/container_sw.png" />
+			<part id="left" path="container/container_w.png" />
+			<part id="middle" path="container/container_content.png" />
+		</image>
+	</item>
+	
 	<!--                GENERAL SKIN PROPS                         -->
 	<prop id="application.backgroundCol" value="0xFFFFFF"/>
 	
@@ -209,7 +243,7 @@
 	<prop id="button.font.size" value="13"/>
 
 	<!--                TAB SKIN PROPS                         -->
-	<prop id="tab.size.width" value="90"/>
+	<prop id="tab.size.width" value="100"/>
 	<prop id="tab.size.height" value="30"/>
 	<prop id="tab.icon.position" value="left"/>
 	<prop id="tab.icon.size" value="16"/>
@@ -233,4 +267,14 @@
 	<!--                LISTVIEW SKIN PROPS                         -->
 	<prop id="listview.item.height" value="20"/>
 	<prop id="listview.item.font.size" value="14"/>
+
+	<!--                TEXTINPUT SKIN PROPS                         -->
+	<prop id="textinput.size.width" value="200"/>
+	<prop id="textinput.size.height" value="23"/>
+	
+	<!--                CHECKBOX SKIN PROPS                         -->
+	<prop id="checkbox.text.col" value="0x000000"/>
+	<prop id="checkbox.font.size" value="13"/>
+	<prop id="checkbox.size.width" value="13"/>
+	<prop id="checkbox.size.height" value="13"/>
 </skin>

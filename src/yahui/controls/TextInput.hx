@@ -28,8 +28,10 @@ class TextInput extends Component {
 	public function new() {
 		super();
 		
-		width = 229;
-		height = 40;
+		width = SkinManager.skin.getSkinPropInt("textinput.size.width", 200);
+		height = SkinManager.skin.getSkinPropInt("textinput.size.height", 30);
+		fontSize = SkinManager.skin.getSkinPropInt("textinput.font.size", 14);
+		textCol = SkinManager.skin.getSkinPropInt("textinput.text.col", 0x000000);
 		
 		textControl = new TextField();
 		mask = new Sprite();

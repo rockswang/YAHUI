@@ -2,6 +2,7 @@ package yahui.controls;
 import nme.text.TextField;
 import nme.text.TextFormat;
 import yahui.core.Component;
+import yahui.skins.SkinManager;
 
 class Label extends Component {
 	public var text:String = " ";
@@ -21,6 +22,8 @@ class Label extends Component {
 
 		width = -1;
 		height = -1;
+		fontSize = SkinManager.skin.getSkinPropInt("label.font.size", 14);
+		textCol = SkinManager.skin.getSkinPropInt("label.text.col", 0x000000);
 	}
 	
 	//************************************************************

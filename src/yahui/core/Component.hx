@@ -4,6 +4,7 @@ import nme.display.DisplayObject;
 import nme.display.Sprite;
 import nme.events.Event;
 import nme.events.IEventDispatcher;
+import yahui.skins.SkinManager;
 
 class Component implements IEventDispatcher {
 
@@ -16,6 +17,7 @@ class Component implements IEventDispatcher {
 	public var numChildren(getNumChildren, null):Int;
 	public var backgroundCol:Int = -1;
 	public var visible(default, setVisible):Bool;
+	public var backgroundSkinId:String;
 	
 	public var ready(getReady, null):Bool = false;
 	
@@ -24,6 +26,10 @@ class Component implements IEventDispatcher {
 	
 	// just to see how many display objects there are (useful for optimisation)
 	public static var componentCount:Int = 0;
+	
+	// background skin (if available)
+	private var backgroundSkin:DisplayObject;
+	public var showBackgroundSkin:Bool = true;
 	
 	public function new() {
 		componentCount++;
@@ -44,14 +50,29 @@ class Component implements IEventDispatcher {
 	//************************************************************
 	//                  OVERRIDABLES
 	//************************************************************
-	private function createChildren():Void { }
+	private function createChildren():Void {
+	}
+	
 	private function resize():Void {
+		if (backgroundSkinId != null) {
+			backgroundSkin = SkinManager.skin.getSkinAsset(backgroundSkinId, width, height);
+			if (backgroundSkin != null) {
+				addChild(backgroundSkin);
+				backgroundSkin.width = width;
+				backgroundSkin.height = height;
+			}
+		}
+		
 		if (backgroundCol > -1) {
 			sprite.graphics.clear();
 			sprite.graphics.beginFill(backgroundCol);
 			sprite.graphics.lineStyle(0, backgroundCol);
 			sprite.graphics.drawRect(0, 0, Std.int(width), Std.int(height));
 			sprite.graphics.endFill();
+		}
+		
+		if (backgroundSkin != null) {
+			sendToBack(backgroundSkin);
 		}
 	}
 	
@@ -187,6 +208,10 @@ class Component implements IEventDispatcher {
 			}
 		}
 		return c;
+	}
+	
+	public function dispose():Void {
+		// TODO: recusively remove and dispose of all children
 	}
 	
 	//************************************************************

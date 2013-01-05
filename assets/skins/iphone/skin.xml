@@ -66,15 +66,7 @@
 	<!--                TABBAR SKIN ITEMS                         -->
 	<item id="tabbar.background">
 		<image>
-			<part id="top.left" path="tabbar/tabbar_bg_nw.png" />
-			<part id="top" path="tabbar/tabbar_bg_n.png" />
-			<part id="top.right" path="tabbar/tabbar_bg_ne.png" />
-			<part id="right" path="tabbar/tabbar_bg_e.png" />
-			<part id="bottom.right" path="tabbar/tabbar_bg_se.png" />
-			<part id="bottom" path="tabbar/tabbar_bg_s.png" />
-			<part id="bottom.left" path="tabbar/tabbar_bg_sw.png" />
-			<part id="left" path="tabbar/tabbar_bg_w.png" />
-			<part id="middle" path="tabbar/tabbar_bg_content.png" />
+			<part id="middle" path="tabbar/tabbar_bg.png" />
 		</image>
 	</item>
 
@@ -176,6 +168,21 @@
 		</image>
 	</item>
 	
+	<!--                CONTAINER SKIN ITEMS                         -->
+	<item id="container.background">
+		<image>
+			<part id="top.left" path="container/container_nw.png" />
+			<part id="top" path="container/container_n.png" />
+			<part id="top.right" path="container/container_ne.png" />
+			<part id="right" path="container/container_e.png" />
+			<part id="bottom.right" path="container/container_se.png" />
+			<part id="bottom" path="container/container_s.png" />
+			<part id="bottom.left" path="container/container_sw.png" />
+			<part id="left" path="container/container_w.png" />
+			<part id="middle" path="container/container_content.png" />
+		</image>
+	</item>
+	
 	<!--                GENERAL SKIN PROPS                         -->
 	<prop id="application.backgroundCol" value="0x424242"/>
 	
@@ -186,7 +193,7 @@
 	<prop id="button.font.size" value="13"/>
 
 	<!--                TAB SKIN PROPS                         -->
-	<prop id="tab.size.width" value="109"/>
+	<prop id="tab.size.width" value="80"/>
 	<prop id="tab.size.height" value="64"/>
 	<prop id="tab.icon.position" value="top"/>
 	<prop id="tab.icon.size" value="32"/>
@@ -216,4 +223,9 @@
 	<prop id="listview.item.font.size" value="20"/>
 	<prop id="listview.item.text.col" value="0xFFFFFF"/>
 	<prop id="listview.item.icon.size" value="32"/>
+
+	<!--                TEXTINPUT SKIN PROPS                         -->
+	<prop id="textinput.size.width" value="200"/>
+	<prop id="textinput.size.height" value="30"/>
+	
 </skin>

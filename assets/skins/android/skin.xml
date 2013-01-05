@@ -109,6 +109,21 @@
 		</image>
 	</item>
 	
+	<!--                CONTAINER SKIN ITEMS                         -->
+	<item id="container.background">
+		<image>
+			<part id="top.left" path="container/container_nw.png" />
+			<part id="top" path="container/container_n.png" />
+			<part id="top.right" path="container/container_ne.png" />
+			<part id="right" path="container/container_e.png" />
+			<part id="bottom.right" path="container/container_se.png" />
+			<part id="bottom" path="container/container_s.png" />
+			<part id="bottom.left" path="container/container_sw.png" />
+			<part id="left" path="container/container_w.png" />
+			<part id="middle" path="container/container_content.png" />
+		</image>
+	</item>
+	
 	<!--                GENERAL SKIN PROPS                         -->
 	<prop id="application.backgroundCol" value="0x161616"/>
 	
@@ -148,6 +163,20 @@
 	<prop id="listview.item.text.col" value="0xFFFFFF"/>
 	<prop id="listview.item.icon.size" value="32"/>
 	
+	<!--                TEXTINPUT SKIN PROPS                         -->
+	<prop id="textinput.size.width" value="200"/>
+	<prop id="textinput.size.height" value="42"/>
+
+	<!--                LABEL SKIN PROPS                         -->
+	<prop id="label.text.col" value="0xFFFFFF"/>
+	<prop id="label.font.size" value="13"/>
+	
+	<!--                CHECKBOX SKIN PROPS                         -->
+	<prop id="checkbox.text.col" value="0xFFFFFF"/>
+	<prop id="checkbox.font.size" value="14"/>
+	<prop id="checkbox.size.width" value="32"/>
+	<prop id="checkbox.size.height" value="32"/>
+
 	<!-- SKIN SOUNDS -->
 	<sound id="tab.click" path="audio/TW_Touch.ogg"/>
 	<sound id="button.click" path="audio/TW_Touch.ogg"/>
@@ -159,4 +188,5 @@
 	<icon id="icons.user" size="32" path="icons/user_32.png"/>
 	<icon id="icons.favs" size="32" path="icons/fav_32.png"/>
 	<icon id="icons.folders.open" size="32" path="icons/folder_open_32.png"/>
+
 </skin>

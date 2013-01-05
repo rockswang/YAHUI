@@ -11,7 +11,6 @@ import yahui.core.Screen;
 import yahui.skins.SkinManager;
 
 class ScrollView extends Container {
-	private var backgroundSkin:DisplayObject;
 	private var content:Container;
 	private var mask:Sprite;
 	
@@ -77,7 +76,7 @@ class ScrollView extends Container {
 		}
 		
 		backgroundSkin = SkinManager.skin.getSkinAsset("listview.background", width, height);
-		if (backgroundSkin != null) {
+		if (backgroundSkin != null && showBackgroundSkin == true) {
 			backgroundSkin.x = 0;
 			backgroundSkin.y = 0;
 			backgroundSkin.width = width;
@@ -101,7 +100,9 @@ class ScrollView extends Container {
 		
 		setScrollRange();
 		
-		sendToBack(backgroundSkin);
+		if (backgroundSkin != null && showBackgroundSkin == true) {
+			sendToBack(backgroundSkin);
+		}
 		sendToBack(eventTarget);	
 		bringToFront(vscroll);
 	}

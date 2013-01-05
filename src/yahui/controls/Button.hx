@@ -132,7 +132,7 @@ class Button extends Component {
 			} else {
 				if (iconPosition == "left") {
 					iconX = labelX - icon.width - 2;
-					iconY = (height / 2) - (icon.height / 2);
+					iconY = (height / 2) - (icon.height / 2) - 2;
 				} else if (iconPosition == "top") {
 					var combHeight = label.height + icon.height;
 					

@@ -34,8 +34,8 @@ class ControlDemo extends Component {
 		tabView.addPage("List", createPage_LIST(), "icons.folders.open");
 		tabView.addPage("Scrolls", createPage_SCROLLS(), "icons.settings");
 		tabView.addPage("Test", createPage("Search page"), "icons.search");
-		for (n in 0...10) {
-			tabView.addPage("Tab " + n, createPage("page " + n), "icons.favs");
+		for (n in 0...7) {
+			tabView.addPage("Tab " + n, createPage("Page content for tab " + n), "icons.favs");
 		}
 	}
 	
@@ -44,6 +44,7 @@ class ControlDemo extends Component {
 		c.width = width - (SkinManager.skin.getSkinPropInt("tabview.padding.left", 0) + SkinManager.skin.getSkinPropInt("tabview.padding.right", 0));
 		c.height = height - SkinManager.skin.getSkinPropInt("tabbar.size.height", 0) - (SkinManager.skin.getSkinPropInt("tabview.padding.top", 0) + SkinManager.skin.getSkinPropInt("tabview.padding.bottom", 0));
 		var label:Label = new Label();
+		label.textCol = SkinManager.skin.getSkinPropInt("tab.selected.text.col", 0x000000);
 		label.text = name;
 		c.addChild(label);
 		return c;
@@ -152,7 +153,7 @@ class ControlDemo extends Component {
 			
 			c.addChild(hbox);
 		}
-		
+
 		{
 			var hbox:HBox = new HBox();
 			hbox.spacing = 5;
@@ -175,13 +176,13 @@ class ControlDemo extends Component {
 			
 			c.addChild(hbox);
 		}
-		
+
 		{
 			var textInput:TextInput = new TextInput();
 			textInput.text = "Basic input";
 			c.addChild(textInput);
 		}
-		
+
 		{
 			var hbox:HBox = new HBox();
 			hbox.spacing = 5;
@@ -201,7 +202,7 @@ class ControlDemo extends Component {
 			
 			c.addChild(hbox);
 		}
-		
+
 		{
 			var hbox:HBox = new HBox();
 			hbox.spacing = 5;
@@ -254,7 +255,7 @@ class ControlDemo extends Component {
 			
 			c.addChild(hbox);
 		}
-		
+
 		{
 			var hbox:HBox = new HBox();
 			hbox.spacing = 5;
@@ -288,8 +289,9 @@ class ControlDemo extends Component {
 			hbox.spacing = 5;
 			
 			var image:Image = new Image();
-			image.width = image.height = 100;
-			image.bitmapAssetPath = "img/slinky_small.jpg";
+			image.width = c.width - 20;
+			image.height = image.width * .75;
+			image.bitmapAssetPath = "img/slinky_large.jpg";
 			hbox.addChild(image);
 
 			hbox.height = image.height;

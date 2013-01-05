@@ -12,8 +12,6 @@ import yahui.skins.SkinHelper;
 import yahui.skins.SkinManager;
 
 class VScroll extends Component {
-	private var backgroundSkin:DisplayObject;
-	
 	// getters/setters
 	private var thumbMinSize:Float = 20;
 	public var min(default, setMin):Float = 0;
